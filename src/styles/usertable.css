@@ -93,19 +93,21 @@
   font-size: 14px;
   color: #545f7d;
 }
-.user-table .data-table tbody tr td.pending {
+.user-table .data-table tbody tr td.Active {
   background-color: #f0ad4e;
   color: #fff;
 }
-.user-table .data-table tbody tr td.success {
-  background-color: #5cb85c;
-  color: #fff;
+.user-table .data-table tbody tr td.Inactive {
+  background: #545f7d;
+  font-size: 14px;
+  text-align: center;
+  color: black;
 }
-.user-table .data-table tbody tr td.failure {
+.user-table .data-table tbody tr td.Pending {
   background-color: #d9534f;
   color: #fff;
 }
-.user-table .data-table tbody tr td.blacklisted {
+.user-table .data-table tbody tr td.Blacklisted {
   background-color: #292b2c;
   color: #fff;
 }/*# sourceMappingURL=usertable.css.map */

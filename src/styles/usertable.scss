@@ -100,19 +100,21 @@
           font-size: 14px;
           color: #545f7d;
 
-          &.pending {
+          &.Active {
             background-color: #f0ad4e;
             color: #fff;
           }
-          &.success {
-            background-color: #5cb85c;
-            color: #fff;
+          &.Inactive {
+            background: #545f7d;
+            font-size: 14px;
+            text-align: center;
+            color: black;
           }
-          &.failure {
+          &.Pending {
             background-color: #d9534f;
             color: #fff;
           }
-          &.blacklisted {
+          &.Blacklisted {
             background-color: #292b2c;
             color: #fff;
           }

@@ -25,7 +25,7 @@ export type User = {
     duration: string;
   };
   employmentStatus: string;
-  status: "pending" | "success" | "failure" | "blacklisted";
+  status: "Inactive" | "Active" | "Pending" | "Blacklisted";
 };
 
 export const UserPageComp = () => {
@@ -65,13 +65,13 @@ const UserTable = ({
       const randomNum = Math.random();
       let status: User["status"];
       if (randomNum < 0.25) {
-        status = "pending";
+        status = "Inactive";
       } else if (randomNum < 0.5) {
-        status = "success";
+        status = "Pending";
       } else if (randomNum < 0.75) {
-        status = "failure";
+        status = "Active";
       } else {
-        status = "blacklisted";
+        status = "Blacklisted";
       }
       return { ...user, status };
     });
