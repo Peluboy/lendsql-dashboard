@@ -15,3 +15,26 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Hide the scrollbar when not active */
+::-webkit-scrollbar {
+  width: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the scrollbar when hovering over it */
+::-webkit-scrollbar:hover {
+  opacity: 1;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3;
+  border-radius: 5px;
+}

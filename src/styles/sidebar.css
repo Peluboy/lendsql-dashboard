@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  padding-top: 2rem;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar .menu-item {
+  padding: 0.7rem 0 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.sidebar .menu-item svg {
+  font-size: 1rem;
+  color: #7a8cb1;
+}
+.sidebar .menu-item span {
+  font-size: 16px;
+  color: #7a8cb1;
+}
+.sidebar .active {
+  background: rgba(201, 255, 255, 0.3098039216);
+  color: #213f7d;
+  border-left: 3px solid #39cdcc;
+  margin-left: 0;
+  font-weight: 500;
+}
+.sidebar .active svg,
+.sidebar .active span {
+  color: #213f7d;
+}
+
+.menu-category {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+.menu-category span {
+  font-size: 12px;
+  font-weight: 500;
+} /*# sourceMappingURL=sidebar.css.map */
