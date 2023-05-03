@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
+$primaryColor: #39cdcc;
+$secondaryColor: #213f7d;
+$textSize: 16px;
+$smallText: 14px;
+$mainHeader: 24px;
+$smallHeader: 22px;
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

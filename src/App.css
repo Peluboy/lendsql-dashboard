@@ -1,0 +1,36 @@
+:where(.css-dev-only-do-not-override-yp8pcc)[class^="ant-layout"],
+:where(.css-dev-only-do-not-override-yp8pcc)[class*=" ant-layout"] {
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-btn-primary {
+  color: #fff;
+  background-color: #39cdcc;
+  box-shadow: 0;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-btn-primary:not(
+    :disabled
+  ):hover {
+  color: #fff;
+  background-color: #39cdcc;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:hover,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:focus {
+  border-color: #dddddd;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:hover,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:focus {
+  border-color: #dddddd;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input:focus,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-input-focused {
+  box-shadow: 0 0 0 0px rgba(5, 145, 255, 0.1);
+
+  outline: 0;
+}
