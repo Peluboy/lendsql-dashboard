@@ -63,3 +63,27 @@
   transition: opacity 0.3s;
   justify-content: space-between;
 }
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-ink-bar {
+  position: absolute;
+  background: #37c4c3;
+  pointer-events: none;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-tab:hover {
+  color: #1a1a1a;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-tab:hover {
+  /* color: #4096ff; */
+  color: #1a1a1a;
+}
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-top > .ant-tabs-nav,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-bottom > .ant-tabs-nav,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-top > div > .ant-tabs-nav,
+:where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-bottom
+  > div
+  > .ant-tabs-nav {
+  margin: 0;
+}

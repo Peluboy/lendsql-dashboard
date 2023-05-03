@@ -46,6 +46,10 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.62.1"
+    "@types/minimist": "^1.2.2",
+    "minimist": "^1.2.8",
+    "node-sass": "^7.0.3",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2"
   }
 }

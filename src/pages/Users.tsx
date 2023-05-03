@@ -9,8 +9,35 @@ export type UserPageProps = {
   userName: string;
   email: string;
   phoneNumber: string;
+  profile: {
+    firstName: string;
+    lastName: string;
+    gender: string;
+    bvn: string;
+    avatar: string;
+    address: string;
+  };
+  accountBalance: string;
+  accountNumber: string;
+  guarantor: {
+    firstName: string;
+    lastName: string;
+    gender: string;
+    address: string;
+  };
   education: {
     duration: string;
+    level: string;
+    officeEmail: string;
+    employmentStatus: string;
+    sector: string;
+    monthlyIncome: string;
+    loanRepayment: string;
+  };
+  socials: {
+    facebook: string;
+    twitter: string;
+    instagram: string;
   };
   employmentStatus: string;
 };
@@ -36,8 +63,35 @@ const Users = () => {
     userName: "",
     email: "",
     phoneNumber: "",
+    profile: {
+      firstName: "",
+      lastName: "",
+      gender: "",
+      bvn: "",
+      avatar: "",
+      address: "",
+    },
+    guarantor: {
+      firstName: "",
+      lastName: "",
+      gender: "",
+      address: "",
+    },
     education: {
       duration: "",
+      level: "",
+      officeEmail: "",
+      employmentStatus: "",
+      sector: "",
+      monthlyIncome: "",
+      loanRepayment: "",
+    },
+    accountBalance: "",
+    accountNumber: "",
+    socials: {
+      facebook: "",
+      twitter: "",
+      instagram: "",
     },
     employmentStatus: "",
   });

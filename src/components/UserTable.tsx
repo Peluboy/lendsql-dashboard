@@ -4,11 +4,7 @@ import Cards from "../components/Cards";
 import { UserPageProps } from "../pages/Users";
 import { BsFilter } from "react-icons/bs";
 
-import type { PaginationProps } from "antd";
-import { Pagination } from "antd";
-
 import "../styles/usertable.scss";
-import CustomPagination from "./CustomPagination";
 
 export type Filter = {
   orgName: string;
@@ -107,12 +103,8 @@ const UserTable = ({
     });
   });
 
-  const [current, setCurrent] = useState(3);
-
-  const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
-    setCurrent(page);
-  };
+  const [current, setCurrent] = useState(1);
+  const pageSize = 10;
 
   return (
     <div className="user-table">
