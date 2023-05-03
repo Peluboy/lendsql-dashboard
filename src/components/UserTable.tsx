@@ -25,6 +25,7 @@ export type User = {
     duration: string;
   };
   employmentStatus: string;
+  status: "pending" | "success" | "failure" | "blacklisted";
 };
 
 export const UserPageComp = () => {
@@ -60,7 +61,21 @@ const UserTable = ({
       "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
     );
     const data = await res.json();
-    setUsers(data);
+    const updatedUsers = data.map((user: User) => {
+      const randomNum = Math.random();
+      let status: User["status"];
+      if (randomNum < 0.25) {
+        status = "pending";
+      } else if (randomNum < 0.5) {
+        status = "success";
+      } else if (randomNum < 0.75) {
+        status = "failure";
+      } else {
+        status = "blacklisted";
+      }
+      return { ...user, status };
+    });
+    setUsers(updatedUsers);
     setLoading(false);
   };
 
@@ -92,7 +107,7 @@ const UserTable = ({
     }
   };
 
-  const filteredUsers = data.filter((user) => {
+  const filteredUsers = users.filter((user) => {
     const filterKeys = Object.keys(filter) as (keyof Filter)[];
     return filterKeys.every((key) => {
       const filterValue = filter[key].toLowerCase();
@@ -102,9 +117,6 @@ const UserTable = ({
       return userValue.includes(filterValue);
     });
   });
-
-  const [current, setCurrent] = useState(1);
-  const pageSize = 10;
 
   return (
     <div className="user-table">
@@ -235,7 +247,7 @@ const UserTable = ({
               <td>{user.email}</td>
               <td>{user.phoneNumber}</td>
               <td>{user.education.duration}</td>
-              <td>{user.employmentStatus}</td>
+              <td className={user.status}>{user.status}</td>
             </tr>
           ))}
         </tbody>

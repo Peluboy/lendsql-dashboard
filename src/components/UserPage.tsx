@@ -2,9 +2,10 @@ import React from "react";
 import { UserPageProps } from "../pages/Users";
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
-import { Avatar } from "antd";
+import { useNavigate } from "react-router-dom";
 
 import Stars from "../assets/stars.svg";
+import { HiArrowLongLeft } from "react-icons/hi2";
 
 import "../styles/usepage.scss";
 
@@ -54,10 +55,25 @@ const UserPage = ({
   >;
   selectedUser: UserPageProps;
 }) => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate("/");
+  };
   return (
     <div className="userpage-container">
-      <button>Go back</button>
-      <h2>User details</h2>
+      <button onClick={handleGoBack}>
+        {" "}
+        <HiArrowLongLeft size={20} color="#545F7D" />
+        Back to Users
+      </button>
+      <div className="user-details-button">
+        <h2>User details</h2>
+        <div className="btns">
+          <button>BLACKLIST USER</button>
+          <button>ACTIVATE USER</button>
+        </div>
+      </div>
       <div className="user-details-header">
         <div className="user-details-header-top">
           <div className="section-1">
