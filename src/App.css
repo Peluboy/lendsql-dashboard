@@ -7,7 +7,7 @@
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-btn-primary {
   color: #fff;
-  background-color: #39cdcc;
+  background-color: #39cdcc !important;
   box-shadow: 0;
 }
 
@@ -15,39 +15,39 @@
     :disabled
   ):hover {
   color: #fff;
-  background-color: #39cdcc;
+  background-color: #39cdcc !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:hover,
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:focus {
-  border-color: #dddddd;
+  border-color: #dddddd !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:hover,
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input-search .ant-input:focus {
-  border-color: #dddddd;
+  border-color: #dddddd !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input:focus,
 :where(.css-dev-only-do-not-override-yp8pcc).ant-input-focused {
-  box-shadow: 0 0 0 0px rgba(5, 145, 255, 0.1);
+  box-shadow: 0 0 0 0px rgba(5, 145, 255, 0.1) !important;
 
-  outline: 0;
+  outline: 0 !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-layout.ant-layout-has-sider {
   flex-direction: row;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn {
-  color: #39cdcc;
+  color: #39cdcc !important;
   text-shadow: 0;
   font-family: "Work Sans";
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15px !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs
@@ -66,17 +66,17 @@
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-ink-bar {
   position: absolute;
-  background: #37c4c3;
+  background: #37c4c3 !important;
   pointer-events: none;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-tab:hover {
-  color: #1a1a1a;
+  color: #1a1a1a !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs .ant-tabs-tab:hover {
   /* color: #4096ff; */
-  color: #1a1a1a;
+  color: #1a1a1a !important;
 }
 
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-top > .ant-tabs-nav,
@@ -85,5 +85,5 @@
 :where(.css-dev-only-do-not-override-yp8pcc).ant-tabs-bottom
   > div
   > .ant-tabs-nav {
-  margin: 0;
+  margin: 0 !important;
 }

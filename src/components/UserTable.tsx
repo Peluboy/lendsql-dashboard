@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import { UserPageProps } from "../pages/Users";
 import { BsFilter } from "react-icons/bs";
-
+import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import "../styles/usertable.scss";
 
 export type Filter = {
@@ -227,6 +227,10 @@ const UserTable = ({
                 <BsFilter />
               </div>
             </th>
+
+            <th>
+              <div>{/* <IoEllipsisVerticalSharp /> */}</div>
+            </th>
           </tr>
         </thead>
         {loading && <div>Loading...</div>}
@@ -248,6 +252,9 @@ const UserTable = ({
               <td>{user.phoneNumber}</td>
               <td>{user.education.duration}</td>
               <td className={user.status}>{user.status}</td>
+              <td>
+                <IoEllipsisVerticalSharp />
+              </td>
             </tr>
           ))}
         </tbody>

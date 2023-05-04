@@ -1,7 +1,11 @@
 import Logo from "../assets/logo.svg";
 import "../styles/header.scss";
 import { Avatar } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import {
+  UserOutlined,
+  SettingOutlined,
+  LoginOutlined,
+} from "@ant-design/icons";
 import { MdArrowDropDown } from "react-icons/md";
 import type { MenuProps } from "antd";
 import { Dropdown, message, Space } from "antd";
@@ -21,27 +25,20 @@ const DashboardHeader = () => {
 
   const items: MenuProps["items"] = [
     {
-      label: "1st menu item",
+      label: "Profile",
       key: "1",
       icon: <UserOutlined />,
     },
     {
-      label: "2nd menu item",
+      label: "Settings",
       key: "2",
-      icon: <UserOutlined />,
+      icon: <SettingOutlined />,
     },
     {
-      label: "3rd menu item",
+      label: "Logout",
       key: "3",
-      icon: <UserOutlined />,
+      icon: <LoginOutlined />,
       danger: true,
-    },
-    {
-      label: "4rd menu item",
-      key: "4",
-      icon: <UserOutlined />,
-      danger: true,
-      disabled: true,
     },
   ];
 
