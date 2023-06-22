@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import { UserPageProps } from "../pages/Users";
 import { BsFilter } from "react-icons/bs";
-import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import "../styles/usertable.scss";
+import { Pagination } from "./Pagination";
 
 export type Filter = {
   orgName: string;
@@ -83,7 +83,13 @@ const UserTable = ({
     fetchData();
   }, []);
 
-  // const [selectedUser, setSelectedUser] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
+
+  //for number of users per pageCount
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = users.slice(firstPostIndex, lastPostIndex);
 
   const handleViewUser = async (id: number) => {
     const res = await fetch(
@@ -107,7 +113,7 @@ const UserTable = ({
     }
   };
 
-  const filteredUsers = users.filter((user) => {
+  const filteredUsers = currentPosts.filter((user) => {
     const filterKeys = Object.keys(filter) as (keyof Filter)[];
     return filterKeys.every((key) => {
       const filterValue = filter[key].toLowerCase();
@@ -227,10 +233,6 @@ const UserTable = ({
                 <BsFilter />
               </div>
             </th>
-
-            <th>
-              <div>{/* <IoEllipsisVerticalSharp /> */}</div>
-            </th>
           </tr>
         </thead>
         {loading && <div>Loading...</div>}
@@ -252,13 +254,16 @@ const UserTable = ({
               <td>{user.phoneNumber}</td>
               <td>{user.education.duration}</td>
               <td className={user.status}>{user.status}</td>
-              <td>
-                <IoEllipsisVerticalSharp />
-              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <Pagination
+        totalPosts={users.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

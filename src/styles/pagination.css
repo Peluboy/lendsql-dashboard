@@ -1,0 +1,37 @@
+.pagination {
+  margin-bottom: 3%;
+  display: inline-block;
+}
+
+.pagination button {
+  padding: 5px 15px;
+  margin: 2px;
+  border: 1px solid rgb(222 226 230);
+  border-radius: 3px;
+  color: #595f7d;
+  font-family: "Poppins";
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.pagination button.active {
+  background: #39cdcc;
+  color: #ffffff;
+}
+
+.pagination button:disabled {
+  background: #efefef;
+  color: black;
+}
+
+@media (max-width: 500px) {
+  .pagination {
+    margin-bottom: 5%;
+  }
+
+  .pagination button {
+    padding: 3px 7px;
+  }
+}

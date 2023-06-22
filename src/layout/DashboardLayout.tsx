@@ -16,7 +16,6 @@ const DashboardLayout = () => {
         <Header
           style={{
             backgroundColor: "white",
-            boxShadow: "3px 5px 20px rgba(0, 0, 0, 0.04)",
             margin: 0,
             padding: 0,
           }}
@@ -40,7 +39,7 @@ const DashboardLayout = () => {
           <Content
             style={{
               backgroundColor: "#FBFBFB",
-              padding: "58px",
+              padding: "2rem",
               overflow: "scroll",
               height: "90vh",
               overflowX: "hidden",

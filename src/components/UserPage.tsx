@@ -8,6 +8,7 @@ import Stars from "../assets/stars.svg";
 import { HiArrowLongLeft } from "react-icons/hi2";
 
 import "../styles/usepage.scss";
+import Cards from "./Cards";
 
 const onChange = (key: string) => {
   console.log(key);

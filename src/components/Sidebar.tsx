@@ -27,6 +27,7 @@ import { GoGraph } from "react-icons/go";
 import { BiMessageDetail } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
+import { HomeOutlined } from "@ant-design/icons";
 
 type MenuItem =
   | {
@@ -52,7 +53,7 @@ const Sidebar: React.FC = () => {
   const list: MenuItem[] = useMemo(
     () => [
       {
-        icon: <IoHome />,
+        icon: <HomeOutlined />,
         heading: "Dashboard",
         link: "/users",
       },

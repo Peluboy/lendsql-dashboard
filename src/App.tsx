@@ -9,14 +9,12 @@ function App() {
       <ConfigProvider
         theme={{
           token: {
-            colorPrimary: "#000",
+            colorPrimary: "#39cdcc",
           },
         }}
-      ></ConfigProvider>
-      <div>
+      >
         <DashboardLayout />
-      </div>
-      <ConfigProvider />
+      </ConfigProvider>
     </>
   );
 }
